@@ -1,0 +1,313 @@
+/*FeedBack Form*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+
+:root{
+    --orange:#FF9814;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    
+    /* Reset margin and padding to 0 for consistent spacing */
+    margin: 0;
+    padding: 0;
+    
+    /* Include the element's border and padding in its total width/height */
+    box-sizing: border-box;
+    
+    /* Remove text underlines for links */
+    text-decoration: none;
+    
+    /* Remove the default outline on focused elements */
+    outline: none;
+    
+    /* Remove borders on elements */
+    border: none;
+    
+    /* Capitalize the text transform for each element */
+    text-transform: capitalize;
+    
+    /* Apply a smooth transition for all style changes over 0.2 seconds */
+    transition: all 0.2s linear;
+}
+
+/* Apply the following styles to the selected (highlighted) text */
+*::selection {
+    /* Set the background color for the selected text using a CSS variable */
+    background: var(--orange);
+    
+    /* Set the text color to white for better contrast */
+    color: #fff;
+}
+
+/* Apply the following styles to the <html> element */
+html {
+    /* Set the base font size to 62.5% for easier rem unit calculations */
+    font-size: 62.5%;
+    
+    /* Hide horizontal overflow to prevent horizontal scrolling */
+    overflow-x: hidden;
+}
+
+/* Apply the following styles to the <body> element */
+body {
+    /* Set a background image for the body using a URL */
+    background-image: url('https://thumbs.dreamstime.com/b/feedback-seamless-pattern-background-white-web-app-loyalty-user-concept-vector-illustration-testimonial-feedback-106201152.jpg');
+    
+    /* Apply a blur effect to the background with a radius of 5px */
+    backdrop-filter: blur(5px);
+}
+
+/* Apply the following styles to the <header> element */
+header {
+    /* Position the header element fixed at the top left corner of the viewport */
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    /* Set a higher z-index to ensure the header displays above other content */
+    z-index: 1000;
+    
+    /* Set the background color of the header to white */
+    background: #fff;
+    
+    /* Apply a box shadow to the header for a subtle shadow effect */
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+    
+    /* Set the width of the header to 100% of the viewport width */
+    width: 100%;
+}
+
+/* Apply the following styles to elements with the class "heading" inside the header */
+header .heading {
+    /* Set the font size of the heading to 10 pixels */
+    font-size: 10px;
+    
+    /* Set the font weight of the heading to bold */
+    font-weight: bold;
+    
+    /* Set the text color of the heading to a medium gray */
+    color: #666;
+    
+    /* Add padding around the heading content */
+    padding: 1rem;
+    
+    /* Center-align the text within the heading element */
+    text-align: center;
+}
+header .head{
+    font-size: 15px;
+    font-weight: bold;
+    color:white;
+    background-color:rgb(11, 35, 53);
+    padding:1rem;
+    text-align: center;
+}
+
+header #menu{
+    font-size: 3rem;
+    color:#666;
+    cursor: pointer;
+    display: none;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: left;
+    list-style: none;
+    padding:1rem; 
+    background-color: #1b1b32;
+}
+
+header .navbar ul li{
+    margin:0 1.5rem;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color:#fff;
+}
+
+header .navbar ul li a:hover{
+    color:#444;
+}
+  
+main {
+    margin-top: 150px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #feedback {
+    background-color: #69a7a1;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .radiobtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  #review {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #first-name,
+  #last-name,
+  #email {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #297dbf;
+  }
+  .rating {
+    display: inline-block;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .rating label:before {
+    content: '\2605';
+  }
+  
+  .rating input:checked ~ label {
+    color: #ffca08;
+  }
+  
+  .rating label:hover ~ label {
+    color: #ffca08;
+  }
+  .footer{
+    background:#333;
+}
+
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    margin:2rem;
+    flex:1 1 30rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:#fff;
+}
+
+.footer .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    font-size: 1.8rem;
+    color:#eee;
+    padding:.4rem 0;
+    display: block;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .box-container .box:nth-child(2){
+    text-align: center;
+}
+
+.footer .box-container form{
+    display: flex;
+    align-items: center;
+}
+
+.footer .box-container form input[type="email"]{
+    height:4.1rem;
+    width:100%;
+    font-size: 1.7rem;
+    padding:0 1rem;
+}
+
+.footer .box-container form .btn{
+    margin-top: 0;
+}
+
+.footer .box-container form .btn:hover{
+    color:#333;
+    background:#ccc;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    background:#222;
+    text-align: center;
+    color:#fff;
+    padding:2rem 1rem;
+    font-weight: normal;
+}
+
+.footer .credit a{
+    color:var(--orange);
+}
+
+
+
+@media (max-width: 768px) {
+
+    /* Feedback form adjustments */
+    #feedback {
+      padding: 20px;
+    }
+  
+    #first-name,
+    #last-name,
+    #email {
+      padding: 8px;
+    }
+  
+}
+
+
